@@ -23,6 +23,23 @@ gestionarlos. A continuación, se indican los campos obligatorios.
     <li>Cada Usuario tiene su propia área(solo puede ver sus podcasts) donde alojará 1 o más podcasts</li>
 </ul>
 
+<h4>Funcionalidades</h4>
+
+<p>Backend (para un perfil ROLE_ADMIN)</p>
+<ul>
+    <li>CRUD usuarios (todos)</li>
+    <li>CRUD podcast (todos)</li>
+    <li>1 Usuario administrador, que pueda gestionar tanto los podcast como los usuarios</li>
+</ul>
+<hr>
+<p>Front-end (para todos los usuarios ROLE_USER y ROLE_ADMIN)</p>
+<ul>
+    <li>Autenticación / Registro de usuario</li>
+    <li>Muro de podcast para el usuario autenticado / registrado</li>
+    <li>Gestión de podcast del usuario</li>
+    <li>El ADMIN puede ver todos los podcasts de cada usuario y gestionarlos indistintamente.</li>
+</ul>
+
 
 
 
