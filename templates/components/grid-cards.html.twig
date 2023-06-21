@@ -1,0 +1,32 @@
+{% block grid %}
+
+	<div class="container">
+		<div class="row mx-auto my-2">
+			{% for podcast in podcasts %}
+				<div class="col-md-4">
+					<div class="card text-white bg-dark">
+						<img src="{{ asset('uploads/image/' ~ podcast.imagen) }}" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">{{ podcast.titulo }}</h5>
+							<p class="h6 font-italic text-light">Creado por
+								{{ podcast.nombre }}
+								{{ podcast.apellidos }}
+							</p>
+							<p class="card-text" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;overflow: hidden;">{{ podcast.descripcion }}</p>
+							<div class="row mx-auto d-flex justify-content-center align-items-center gap-3 mb-3">
+								<a class="col-md-5 btn btn-info" href="/podcast/view/{{ podcast.id }}">Ver</a>
+								<button class="col-md-5 btn btn-secondary cambiarPodcast" type="button" data-titulo="{{ podcast.titulo }} " data-audio="{{ podcast.audio }}">Play</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				{% if loop.index % 3 == 0 %}
+				</div>
+				<div class="row mx-auto my-2">
+				{% endif %}
+
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}

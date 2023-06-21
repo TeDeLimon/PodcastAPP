@@ -1,0 +1,217 @@
+$header-color: #5300ff;
+
+body {
+    background-color: black;
+}
+
+p {
+    color: $header-color;
+    font-weight: 700;
+}
+
+/*CSS exclusivo para el reproductor de música*/
+.music-player {
+    max-height: 180px;
+    padding: 0.3rem 4% 1.7rem 4%;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 10;
+}
+
+/*CSS Helper*/
+.max-h-3 {
+    max-height: 3rem !important;
+}
+
+.min-h-500 {
+    min-height: 500px;
+}
+
+.h-45 {
+    height: 45px;
+}
+
+.h-500 {
+    height: 500px;
+}
+
+.h-650 {
+    height: 650px;
+}
+
+.h-850 {
+    height: 850px;
+}
+
+.h-800 {
+    height: 800px;
+}
+
+.w-45 {
+    width: 45;
+}
+
+.mb-180 {
+    margin-bottom: 180px !important;
+}
+
+/*Destinado a diferentes componentes*/
+.carrusel {
+    background-image: url('https://images.podcastpage.io/fetch/https%3A%2F%2Fsites.podcastpage.io%2F614237f5a407aa0018f5854b%2Fmedia%2Fbc0973db57d65667423f.png?w=1920');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.sidebarClient {
+    align-items: stretch;
+    // height: calc(auto - 109px) !important;
+}
+
+.sidebarTabla {
+    height: calc(100% - 37.5px) !important;
+}
+
+div.navigation>nav>ul.pagination {
+    margin-bottom: 0 !important;
+}
+
+.background-create {
+    background-image: url('https://images.podcastpage.io/fetch/https%3A%2F%2Fsites.podcastpage.io%2F622739ebb157760018b3d9a7%2Fmedia%2F2b9122e80479ae989f3a.jpg?w=1920&dpr=&dpr=1.3');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-height: 500px;
+}
+
+.background-login {
+    background-image: url('https://images.podcastpage.io/fetch/https%3A%2F%2Fsites.podcastpage.io%2F614237f5a407aa0018f5854b%2Fmedia%2F259713764420c739904e.jpeg?w=1920') !important;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-height: 500px;
+}
+
+.background-center {
+    background-position: center;
+}
+
+
+/*Sección destinada a ABOUT US*/
+
+/* <!-- About Section Start --> */
+@media only screen and (min-width: 768px) {
+    .section-padding {
+        height: 800px;
+    }
+}
+
+.section-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.section-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.section,
+.main-wrapper {
+    float: left;
+    width: 100%;
+}
+
+.learts-mb-n30 {
+    margin-bottom: -30px;
+}
+
+.learts-mb-30 {
+    margin-bottom: 30px;
+}
+
+.about-us3 .sub-title {
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: "Futura", Arial, Helvetica, sans-serif;
+}
+
+.about-us3 .title {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Marcellus", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: 0;
+    color: #333;
+}
+
+.about-us3 .desc {
+    margin-bottom: 35px;
+    font-family: "Futura", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.75;
+    position: relative;
+    visibility: visible;
+    overflow-x: hidden;
+    color: #696969;
+}
+
+.about-us3 .link {
+    font-weight: 500;
+    line-height: 1.25;
+    position: relative;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #333;
+}
+
+.about-us3 .link::before {
+    width: 60px;
+    height: 2px;
+    margin-right: 10px;
+    content: "";
+    -webkit-transition: all .5s ease 0s;
+    -o-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
+    background-color: #333;
+}
+
+.about-us3 .link:hover {
+    color: #f8796c;
+    text-decoration: none;
+}
+
+.about-us3 .link:hover::before {
+    width: 70px
+}
+
+
+/* ekvivalent je bootstrap klasa img-fluid! */
+/* .responsive-img {
+max-width: 100%;
+    height: auto;
+} */

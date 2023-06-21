@@ -1,16 +1,76 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Welcome!
+			{% endblock %}
+		</title>
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 
-        {% block javascripts %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+		{% block stylesheets %}
+			{{ encore_entry_link_tags('app') }}
+		{% endblock %}
+
+
+	</head>
+	<body>
+		<header class="p-3 bg-dark text-white">
+			<div class="container">
+				<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+					<a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+						<svg width="429" height="103.98415708152952" viewbox="0 0 350 84.83555939052525" class="max-h-3">
+							<defs id="SvgjsDefs3041">
+								<linearGradient id="SvgjsLinearGradient3044">
+									<stop id="SvgjsStop3045" stop-color="#616161" offset="0"></stop>
+									<stop id="SvgjsStop3046" stop-color="#e6e7e8" offset="0.5"></stop>
+									<stop id="SvgjsStop3047" stop-color="#616161" offset="1"></stop>
+								</linearGradient>
+							</defs>
+							<g id="SvgjsG3042" featurekey="nameFeature-0" transform="matrix(3.021698474884033,0,0,3.021698474884033,-2.8277960984032,-36.11426745949542)" fill="url(#SvgjsLinearGradient3044)">
+								<path d="M0.93583 12.032 l4.2781 0 l2.4866 20.107 l2.4599 -20.107 l3.6898 0 l-3.4225 27.995 l-5.4813 0 l-3.3155 -27.166 l-0.026738 0 z M18.58284973262032 35.8021 l4.3316 0 l0 -19.545 l-5.4011 0 l1.0695 0.82888 l0 18.717 z M26.57714973262032 14.678999999999998 l0 22.701 c0 1.4973 -1.1497 2.6471 -2.6471 2.6471 l-6.3636 0 c-1.4973 0 -2.6471 -1.1497 -2.6471 -2.6471 l0 -22.701 c0 -1.4171 1.1497 -2.6471 2.6471 -2.6471 l6.3636 0 c1.4973 0 2.6471 1.2299 2.6471 2.6471 z M31.898370588235295 39.946524 l-3.6898 0 l0 -27.166 l-0.66845 -0.82888 l4.3583 0 l0 27.995 z M36.123017112299465 12.004999999999999 l7.1658 0 l0 4.2246 l-7.246 0 l1.0963 0.80214 c-0.10695 4.7059 -0.10695 14.064 0 18.743 l6.1497 0 l0 4.2246 l-7.1658 0 c-1.4973 0 -2.6471 -1.1497 -2.6471 -2.6471 l0 -22.701 c0 -1.4973 1.1497 -2.6471 2.6471 -2.6471 z M44.57214866310161 12.861 l-0.66845 -0.82888 l10.508 0 l0 4.2246 l-7.246 0 l1.0963 0.82888 l0 6.8182 l4.3316 0 l0 4.2513 l-5.4278 0 l1.0963 0.80214 l0 6.8449 l6.1497 0 l0 4.2246 l-9.8396 0 l0 -4.2246 l0 -7.6471 l0 -4.2513 l0 -11.043 z M59.62564331550802 39.946524 l-3.6898 0 l0 -27.166 l-0.66845 -0.82888 l4.3583 0 l0 27.995 z M61.122996256684495 12.004999999999999 l5.2406 0 l3.4225 15.267 l0 -15.241 l3.6631 0 l0 27.968 l-4.5722 0 l-3.3957 -15.187 l0 15.214 l-3.6898 0 l0 -27.193 z M86.41672192513369 14.678999999999998 l0 5.7754 l-3.6631 0 l0 -4.2246 l-5.4011 0 l1.0695 0.82888 l0 3.3957 l7.9947 9.8128 l0 4.2246 l0 2.8877 c0 1.4171 -1.1497 2.6471 -2.6471 2.6471 l-6.3636 0 c-1.4973 0 -2.6471 -1.2299 -2.6471 -2.6471 l0 -5.9626 l3.6631 0 l0 4.385 l4.3316 0 l0 -4.2246 l-7.9947 -9.8128 l0 -7.0856 c0 -1.4973 1.1497 -2.6471 2.6471 -2.6471 l6.3636 0 c1.4973 0 2.6471 1.1497 2.6471 2.6471 z M91.47056310160428 39.946524 l-3.6898 0 l0 -27.166 l-0.66845 -0.82888 l4.3583 0 l0 27.995 z M97.32621604278076 35.8021 l4.3048 0 l0 -19.545 l-5.4011 0 l1.0963 0.82888 l0 18.717 z M105.32101604278076 14.678999999999998 l0 22.701 c0 1.4973 -1.1765 2.6471 -2.6738 2.6471 l-9.0107 0 l0 -4.2246 l0 -22.941 l-0.66845 -0.82888 l9.6791 0 c1.4706 0 2.6738 1.2299 2.6738 2.6471 z M106.9250898395722 12.861 l-0.66845 -0.82888 l10.508 0 l0 4.2246 l-7.246 0 l1.0963 0.82888 l0 6.8182 l4.3316 0 l0 4.2513 l-5.4278 0 l1.0963 0.80214 l0 6.8449 l6.1497 0 l0 4.2246 l-9.8396 0 l0 -4.2246 l0 -7.6471 l0 -4.2513 l0 -11.043 z"></path>
+							</g>
+						</svg>
+					</a>
+
+					<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+						<li>
+							<a href="/" class="nav-link px-2 text-secondary">Home</a>
+						</li>
+						<li>
+							<a href="/podcasts" class="nav-link px-2 text-white">Podcasts</a>
+						</li>
+						{% if is_granted('ROLE_ADMIN') %}
+							<li>
+								<a href="/dashboard" class="nav-link px-2 text-white">Dashboard</a>
+							</li>
+						{% endif %}
+						<li>
+							<a href="/about" class="nav-link px-2 text-white">About</a>
+						</li>
+					</ul>
+
+					<div class="text-end">
+						{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+							<a href="/cuenta" class="btn btn-outline-light me-2">Mi Perfil</a>
+							<a href="/logout" class="btn btn-warning">Logout</a>
+						{% else %}
+							<a href="/login" class="btn btn-outline-light me-2">Login</a>
+							<a href="/register" class="btn btn-warning">Registrarse</a>
+						{% endif %}
+					</div>
+
+				</div>
+			</div>
+		</header>
+		{% block body %}{% endblock %}
+
+
+		{% block javascripts %}
+			{{ encore_entry_script_tags('app') }}
+		{% endblock %}
+	</body>
 </html>

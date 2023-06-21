@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello LoginController!
+{% endblock %}
+
+{% block body %}
+	{% if error %}
+		<div class="h3 mx-auto text-center text-white py-2">{{ error.messageKey | trans(error.messageData, 'security') }}</div>
+	{% endif %}
+
+	<section class="background-login pb-4 py-3 container">
+		<div class="w-75 mx-auto border rounded-5 p-3">
+			<form
+				action="{{ path('login') }}" method="POST">
+				<!-- Email input -->
+				<div class="form-outline mb-4 text-white">
+					<label class="form-label h5" for="email">Email</label>
+					<input type="text" id="email" name="email" class="form-control value=" {{ lastUserName }} ""/>
+
+				</div>
+
+				<!-- Password input -->
+				<div class="form-outline mb-4 text-white">
+					<label class="form-label h5" for="password">Contraseña</label>
+					<input type="password" id="password" name="password" class="form-control"/>
+
+				</div>
+
+				<div class="row mb-4 text-white">
+					<div
+						class="col">
+						<a class="text-white" href="/olvide">¿Has olvidado tu contraseña?</a>
+					</div>
+				</div>
+
+				<!-- Submit button -->
+				<button type="submit" class="btn btn-primary btn-block mb-4 text-white">Inicia Sesión</button>
+
+				<!-- Register buttons -->
+				<div class="text-center text-white">
+					<p class="text-white">¿Aún no eres miembro?
+						<a href="/register" class="text-white">Regístrate</a>
+					</p>
+				</div>
+			</form>
+		</div>
+	</section>
+
+{% endblock %}

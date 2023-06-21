@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Subir Podcast
+{% endblock %}
+
+{% block body %}
+	<div class="background-create">
+		<div class="container">
+			<h2 class="text-center pt-3 text-white">Sube tu Podcast</h2>
+			{{ form_start(form) }}
+			<div class="row px-1 w-75 mx-auto">
+				<div class="col-md-12 my-2">
+					<p class="text-white font-weight-bold h4">Título</p>
+					{{ form_widget(form.titulo, {attr:{'placeholder':'Titulo del Podcast', 'class':'form-control'}}) }}
+				</div>
+				<div class="col-md-12 my-2">
+					<p class="text-white h4">Descripción</p>
+					{{ form_widget(form.descripcion, {attr:{'placeholder':'¡Emociónate explicando tu podcast!', 'class':'form-control'}}) }}
+				</div>
+				<div class="col-md-12 my-2">
+					<p class="text-white h4">Podcast (mp3, ogg, m4a)</p>
+					{{ form_widget(form.audio, {attr:{'class':'form-control my-2'}}) }}
+				</div>
+				<div class="col-md-12">
+					<p class="text-white h4">Imagen Podcast (jpg, png, webp)</p>
+					{{ form_widget(form.imagen, {attr:{'class':'form-control my-2'}}) }}
+					{{ form_widget(form.submit, {attr:{'class':'my-2 btn btn-success', 'value':'Guardar'}}) }}
+				</div>
+			</div>
+			{{ form_end(form) }}
+		</div>
+	</div>
+
+	<div class="container px-4 py-5" id="custom-cards">
+		<h2 class="h2 text-center text-white">¡Nada nos hace más libres que la voz!</h2>
+
+		<div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+			<div class="col">
+				<div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg background-center" style="background-image: url('https://img.money.com/2017/09/obamahealthcarespeech-em-850166806.jpg?quality=60&w=695');">
+					<div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+						<h3 class="pt-5 mt-5 mb-4 display-8 lh-1 fw-bold text-white">Comparte ideas, pensamientos, sueños</h3>
+						<ul class="d-flex list-unstyled mt-auto">
+							
+							<li class="d-flex align-items-center me-3">
+								<small>Novel de la paz, 2009</small>
+							</li>
+						</ul>
+					</div>
+				</div>5
+			</div>
+
+			<div class="col">
+				<div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg background-center" style="background-image: url('https://www.sheknows.com/wp-content/uploads/2022/07/jane-fonda-sex-age-better.jpg?w=695&h=391&crop=1');">
+					<div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+						<h3 class="pt-5 mt-5 mb-4 display-8 lh-1 fw-bold text-white">Sin miedos, sin represalias, sé tú mismo</h3>
+						<ul class="d-flex list-unstyled mt-auto">
+							
+							<li class="d-flex align-items-center me-3">
+								<small>Mejor reportera, 2017</small>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg background-center" style="background-image: url('https://st1.uvnimg.com/dims4/default/dbf8db7/2147483647/thumbnail/1024x576%3E/quality/75/?url=https%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2Fassets%2Fvixes%2Fimj%2Fr%2Frecorrido-papal-papa-francisco-2.jpg');">
+					<div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+						<h3 class="pt-5 mt-5 mb-4 display-8 lh-1 fw-bold text-white">Hagamos un mundo menos frío, más justo</h3>
+						<ul class="d-flex list-unstyled mt-auto">
+							
+							<li class="d-flex align-items-center me-3">
+								<small>Símbolo de unión , 2013</small>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

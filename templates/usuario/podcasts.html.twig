@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}¡Tus Podcasts!
+{% endblock %}
+
+{% block body %}
+
+
+	<div class="d-flex sidebarClient row">
+
+		{% include "./components/sidebarClient.html.twig" %}
+
+		<div class="col-md-10">
+			<table class="sidebarTabla table table-hover mb-0">
+				<tr>
+					{# sorting of properties based on query components #}
+					<th>{{ knp_pagination_sortable(pagination, '', 'podcast.id') }}</th>
+					<th {% if pagination.isSorted('podcast.titulo') %} class="sorted" {% endif %}>
+						{{ knp_pagination_sortable(pagination, 'Titulo', 'podcast.titulo') }}
+					</th>
+					<th {% if pagination.isSorted('podcast.fecha_subida') %} class="sorted" {% endif %}>
+						{{ knp_pagination_sortable(pagination, 'Fecha Subida', ['podcast.fecha_subida']) }}
+					</th>
+					<th class="text-center">Reproducir</th>
+					<th class="text-center">Actualizar</th>
+					<th class="text-center">Borrar</th>
+				</tr>
+
+				{# table body #}
+				{% for podcast in pagination %}
+					<tr {% if loop.index is odd %} class="color" {% endif %}>
+						<td>
+							<a href="/podcast/view/{{ podcast.id }}">Ver</a>
+						</td>
+						<td>{{ podcast.titulo }}</td>
+						<td>{{ podcast.fecha_subida | date('Y-m-d') }},
+							{{ podcast.fecha_subida | date('H:i:s') }}</td>
+						<td class="text-center">
+							<a class="cambiarPodcast" type="button" data-titulo="{{ podcast.titulo }} " data-audio="{{ podcast.audio }}">
+								Play
+							</a>
+
+						</td>
+						<td class="text-center">
+							<a href="/podcast/update/{{ podcast.id }}">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewbox="0 0 16 16">
+									<path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+								</svg>
+							</a>
+						</td>
+						<td class="text-center">
+							<a href="/podcast/delete/{{ podcast.id }}">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewbox="0 0 16 16">
+									<path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
+									<path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
+								</svg>
+							</a>
+						</td>
+					</tr>
+				{% endfor %}
+			</table>
+
+			{# display navigation #}
+			<div class="navigation d-flex justify-content-center align-items-center bg-light">
+				{{ knp_pagination_render(pagination) }}
+			</div>
+		</div>
+
+	</div>
+
+	{% include './components/player.html.twig' %}
+
+{% endblock %}
