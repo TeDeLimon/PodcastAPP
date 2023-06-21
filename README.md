@@ -1,4 +1,5 @@
-howler.js is an audio library for the modern web. It defaults to Web Audio API and falls back to HTML5 Audio. This makes working with audio in JavaScript easy and reliable across all platforms.
+<h2>PodcastAPP es una aplicación MVC realizada con el framework Symfony 6 y Bootstrap.</h2>
+
 
 Additional information, live demos and a user showcase are available at howlerjs.com.
 
