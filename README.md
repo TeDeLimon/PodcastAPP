@@ -1,4 +1,5 @@
-<h2>PodcastAPP es una aplicación MVC realizada con el framework Symfony 6 y Bootstrap.</h2>
+<h2>PodcastAPP</h2> 
+<h4>es una aplicación MVC realizada con el framework Symfony 6 y Bootstrap.</h4>
 
 
 Additional information, live demos and a user showcase are available at howlerjs.com.
