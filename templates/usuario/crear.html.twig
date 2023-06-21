@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Crear Usuario
+{% endblock %}
+
+{% block body %}
+
+	<section class="background-login pb-4 py-3 container">
+		<div class="w-75 mx-auto border rounded-5 p-3">
+			<h2 class="text-center pt-3 text-white">Crea un Usuario</h2>
+			{{ form_start(form) }}
+			<div class="row px-1 w-75 mx-auto">
+				<div class="col-md-12 my-2">
+					<p class="text-white font-weight-bold h4">Nombre</p>
+					{{ form_widget(form.nombre, {attr:{'placeholder':'Nombre del usuario', 'class':'form-control'}}) }}
+				</div>
+				<div class="col-md-12 my-2">
+					<p class="text-white h4">Apellidos</p>
+					{{ form_widget(form.apellidos, {attr:{'placeholder':'Apellidos del usuario', 'class':'form-control'}}) }}
+				</div>
+				<div class="col-md-12 my-2">
+					<p class="text-white h4">Email</p>
+					{{ form_widget(form.email, {attr:{'placeholder':'Email del usuario', 'class':'form-control my-2'}}) }}
+				</div>
+				<div class="col-md-12">
+					<p class="text-white h4">Contraseña</p>
+					{{ form_widget(form.password, {attr:{'placeholder':'Escribe una contraseña', 'class':'form-control my-2'}}) }}
+					{{ form_widget(form.submit, {attr:{'class':'my-2 btn btn-success', 'value':'Guardar'}}) }}
+				</div>
+			</div>
+			{{ form_end(form) }}
+
+		</div>
+	</section>
+
+	<h1>{{ alerta }}</h1>
+
+{% endblock %}

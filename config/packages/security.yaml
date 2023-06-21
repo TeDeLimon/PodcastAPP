@@ -38,6 +38,11 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
         - { path: ^/dashboard, roles: ROLE_ADMIN }
+        - { path: ^/dashboardUsuario, roles: ROLE_ADMIN }
+        - { path: ^/usuario/view/id, roles: ROLE_ADMIN }
+        - { path: ^/usuario/update/id, roles: ROLE_ADMIN }
+        - { path: ^/usuario/delete/id, roles: ROLE_ADMIN }
+        - { path: ^/usuario/create, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
 
 when@test:

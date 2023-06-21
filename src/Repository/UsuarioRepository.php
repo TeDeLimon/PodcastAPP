@@ -62,6 +62,17 @@ class UsuarioRepository extends ServiceEntityRepository implements PasswordUpgra
         return $this->findBy(array('email' => $email), array('email' => 'ASC'), 1, 0);
     }
 
+    /*Esta función devuelve todos los usuarios indistintivamente, es usada en el CRUD de usuarios por el ADMIN*/
+    public function findUsers()
+    {
+        return $this->getEntityManager()
+            ->createQuery(
+                "SELECT usuario.id, usuario.email, usuario.nombre, usuario.apellidos
+                FROM App:Usuario usuario
+                ORDER BY usuario.apellidos"
+            );
+    }
+
     //    /**
     //     * @return Usuario[] Returns an array of Usuario objects
     //     */
