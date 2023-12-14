@@ -174,4 +174,14 @@ class UsuarioController extends AbstractController
 
         return $this->render('usuario/recover.html.twig', []);
     }
+
+    #[Route('/vistaUsuario', name: 'vistaUsuario')]
+    public function vistaUsuario(): Response
+    {
+        $podcasts = $this->em->getRepository(Podcast::class)->obtenerPodcast2(6);
+
+        return $this->render('usuario/podcastsUsuarios.html.twig', [
+            'podcasts' => $podcasts
+        ]);
+    }
 }

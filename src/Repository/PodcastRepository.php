@@ -112,6 +112,20 @@ class PodcastRepository extends ServiceEntityRepository
             ->getResult();
     }
 
+    public function obtenerPodcast2($id)
+    {
+        /*Este método obtiene 1 único elemento basado en el ID*/
+        return $this->getEntityManager()
+            ->createQuery(
+                "SELECT podcast.id, podcast.titulo, podcast.fecha_subida, podcast.descripcion, podcast.audio, podcast.imagen
+                FROM App:Podcast podcast
+                WHERE podcast.autor = $id"
+            )
+            ->getResult();
+    }
+
+
+
 
 
     //    /**

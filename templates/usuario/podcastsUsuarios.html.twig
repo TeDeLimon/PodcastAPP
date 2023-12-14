@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mi Cuenta
+{% endblock %}
+
+{% block body %}
+	
+    {% for item in podcasts %}
+        {{dump(item)}}
+    {% endfor %}
+
+{% endblock %}
